@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Variáveis e configurações locais
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Cache, logs e arquivos temporários
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+*.log
+*.tmp
+*.swp
+*~
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de build
+build/
+dist/
+
+# Bancos de dados
+*.db
+*.csv
+
+# Arquivos auxiliares temporários do SQLite; os bancos .db continuam versionáveis.
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
