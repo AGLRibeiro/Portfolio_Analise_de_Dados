@@ -1,6 +1,6 @@
 # Portfólio de Ciência de Dados
 
-![Banner](Imagens/Banner_Adilson.jpeg)
+<img src="Imagens/Banner_Adilson.jpeg" width="600">
 Olá! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física pela Universidade Federal do Paraná. Tenho experiência em exploração de dados e aplico conhecimentos de matemática, estatística e programação para transformar dados em informações relevantes, identificar padrões e tendências e apoiar a tomada de decisões. Tenho interesse em atuar nas áreas de Análise de Dados e Ciência de Dados.
 
 # Projeto: Diagnóstico financeiro da Olist
@@ -16,23 +16,40 @@ Olá! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física p
 - Como o faturamento se distribui entre os clientes? Há concentração relevante?
 
 **Principais resultados:**
+- A receita aumentou devido ao crescimento do número de vendas. O ticket médio permaneceu praticamente estável (+1,53%), enquanto o volume de vendas cresceu 140,19% no mesmo período.
+- O número de vendas aumentou em decorrência do crescimento de 147,17% na base de clientes, e não do aumento da frequência de compra, que permaneceu praticamente estável, apresentando uma variação negativa de 0,45%.
+- A receita não depende de um único cliente; o maior faturamento individual é de R$ 13.664,08. Ainda assim, há concentração em uma parcela da base de consumidores: 29,28% dos clientes representam 63,9% da receita, equivalente a R$ 9.810.944,74.
 
-- O faturamento cresceu 143,87% entre os períodos comparáveis de 2017 e 2018. O aumento foi acompanhado pelo crescimento de 140,19% no volume de vendas, enquanto o ticket médio variou 1,53%.
-- A base de clientes aumentou 147,17%; a frequência média de compra, por sua vez, teve variação negativa de 0,45%.
-- O maior faturamento individual por cliente foi de R$ 13.664,08. Cerca de 29,28% dos clientes concentraram 63,9% da receita.
+**Recomendações:** 
+- Embora a receita não esteja concentrada em um único cliente, uma parcela de aproximadamente 29,28% da base é responsável por 63,9% do faturamento. Isso evidencia a importância desse grupo para os resultados da empresa. Recomenda-se desenvolver estratégias de retenção e fidelização, com programas de fidelidade, benefícios exclusivos e ações de relacionamento, para reduzir o risco de perda de receita. Também se recomenda implementar campanhas de upsell e cross-sell para aumentar o ticket médio dos demais clientes e estimular uma distribuição mais equilibrada do faturamento.
 
-**Recomendações:** Criar ações de recompra e fidelização, identificar clientes inativos e personalizar campanhas com base no histórico de compras para estimular a recorrência. Também é recomendável fortalecer o relacionamento com os clientes que mais contribuem para o faturamento e avaliar iniciativas de upsell e cross-sell para os demais grupos.
+- Criar programas de fidelidade, desenvolver campanhas de recompra, identificar clientes inativos e elaborar campanhas personalizadas com base no histórico de compras, buscando aumentar a frequência de compra dos clientes atuais. A empresa conseguiu conquistar novos clientes, mas ainda não demonstrou crescimento significativo na recorrência de compra.
 
-## O que você encontrará aqui?
+# O que você encontrará aqui?
+A análise foi desenvolvida em Python, utilizando principalmente as bibliotecas pandas para manipulação dos dados e SQLite para consultas e integração das tabelas.
 
+Inicialmente, foi realizada uma exploração dos dados para avaliar sua estrutura, qualidade e consistência. Em seguida, foram aplicados filtros temporais e critérios de seleção dos pedidos, considerando apenas aqueles entregues no período analisado.
+
+Com os dados preparados, foram construídos indicadores de desempenho, como faturamento, volume de vendas, ticket médio, aquisição de clientes, frequência de compra e concentração de receita. Por fim, foram elaborados gráficos para facilitar a visualização dos resultados, identificar tendências e apoiar a interpretação dos indicadores.
 - **Preparação e análise exploratória:** inspeção das tabelas, avaliação de valores ausentes e análise da qualidade e do recorte temporal dos registros.
 - **SQL com SQLite:** consultas com `SELECT`, `WHERE`, `INNER JOIN`, `GROUP BY` e `ORDER BY`, além das funções de agregação `SUM` e `COUNT(DISTINCT ...)` e da função de data `strftime`.
 - **Views:** criação da view `orders_cleaned` com `CREATE VIEW`, após remover uma versão anterior com `DROP VIEW IF EXISTS`. A view restringe a análise a pedidos entregues no intervalo temporal selecionado.
-- **Integração entre Python e SQL:** uso de pandas para carregar os arquivos CSV em tabelas SQLite, executar consultas parametrizadas e trazer os resultados para DataFrames.
+- **Integração entre Python e SQL:** utilização da biblioteca pandas para importar arquivos CSV para tabelas SQLite, executar consultas SQL parametrizadas e carregar os resultados em DataFrames.
+- **Manipulação e filtragem de dados:** utilização da biblioteca pandas para selecionar, transformar e filtrar registros, frequentemente por meio de indexação booleana (Boolean Indexing).
 - **Análise de negócio:** avaliação do faturamento, do volume de vendas, do ticket médio, da quantidade e frequência de compra dos clientes e da concentração de receita.
-- **Visualização e interpretação:** gráficos e indicadores para comunicar tendências, resultados e recomendações.
+- **Visualização e interpretação:** elaboração de gráficos estáticos com Matplotlib e gráficos interativos com Plotly, além da construção de indicadores para identificar tendências, interpretar resultados e comunicar as principais conclusões e recomendações da análise.
 
 ## Dados
+**Critérios de seleção das tabelas**
+
+O dataset da Olist disponibiliza diversas tabelas com informações sobre pedidos, clientes, vendedores, produtos, pagamentos, avaliações e logística. Inicialmente, analisei a estrutura do dataset e identifiquei quais tabelas continham as informações necessárias para responder às perguntas analíticas propostas. Para este projeto, foram selecionadas três tabelas com base na sua relevância para os objetivos analíticos estabelecidos.
+
+A seleção considerou os seguintes critérios:
+- Relevância para o negócio: utilização de dados diretamente relacionados às perguntas que orientaram a análise.
+- Necessidade analítica: priorização das informações indispensáveis para a construção dos indicadores e métricas.
+- Eficiência do modelo: redução de relacionamentos e complexidade desnecessários, mantendo a consistência das análises.
+- Foco nos resultados: concentração nos dados que efetivamente contribuíam para a geração de insights. 
+As demais tabelas não foram utilizadas porque estavam fora do escopo definido ou não agregavam informações necessárias aos objetivos desta análise. Essa decisão foi uma escolha metodológica para manter o projeto direcionado, consistente e alinhado às perguntas de negócio propostas.
 
 O projeto utiliza três arquivos CSV com dados de clientes, pedidos e pagamentos, além de um banco SQLite. Os arquivos estão armazenados em [`data/`](data/):
 
@@ -54,20 +71,6 @@ Este conjunto reúne identificadores e informações de localização dos client
 | `customer_zip_code_prefix` | Prefixo de cinco dígitos do CEP informado para o cliente. |
 | `customer_city` | Cidade do cliente. |
 | `customer_state` | Estado do cliente. |
-
-### Dados de itens do pedido
-
-O conjunto completo disponibilizado pela Olist no Kaggle também contém informações sobre os itens incluídos em cada pedido, embora esse arquivo não esteja entre os CSVs usados neste projeto. Por exemplo, o pedido `00143d0f86d6fbd9f9b38ab440ac16f5` contém três unidades do mesmo produto. O valor unitário de R$ 21,33 resulta em R$ 63,99 em produtos. Considerando frete de R$ 15,10 por unidade, o frete total é R$ 45,30 e o pedido soma R$ 109,29 entre produtos e frete. O valor do frete de cada item é calculado considerando características como dimensões e peso; quando um pedido inclui vários itens, somam-se os fretes registrados para cada um.
-
-| Campo | Descrição |
-|---|---|
-| `order_id` | Identificador do pedido ao qual o item pertence. |
-| `order_item_id` | Número sequencial que identifica cada item dentro do pedido. |
-| `product_id` | Identificador do produto comprado. |
-| `seller_id` | Identificador do vendedor responsável pelo item. |
-| `shipping_limit_date` | Data-limite para o vendedor encaminhar o item ao parceiro logístico. |
-| `price` | Valor do item. |
-| `freight_value` | Valor do frete associado ao item. Para calcular o frete total de um pedido com vários itens, somam-se os valores registrados para cada item. |
 
 ### Dados de pagamentos
 
@@ -104,14 +107,14 @@ Esta tabela reúne os pedidos e suas principais datas, conectando cada compra ao
 2. **Exploração e preparação:** [`analytics/raw_exploratory_analysis.ipynb`](analytics/raw_exploratory_analysis.ipynb) examina as tabelas, os valores ausentes, os status dos pedidos e a estabilidade dos registros ao longo do tempo.
 3. **Seleção dos pedidos:** a função `create_view_cleaned_data()` cria a view `orders_cleaned`, considerando os pedidos entregues com data de compra a partir de 1º de dezembro de 2016 e anterior a 26 de agosto de 2018.
 4. **Análise financeira:** [`analytics/analysis.ipynb`](analytics/analysis.ipynb) compara os seguintes indicadores:
-   - **Ticket médio:** indica quanto, em média, foi gasto por venda.
-   - **Quantidade de vendas:** mostra a evolução do volume de transações.
-   - **Quantidade de clientes:** ajuda a avaliar se o crescimento das vendas acompanha a expansão da base de consumidores.
-   - **Frequência de compra:** mostra quantas compras, em média, cada cliente realizou no período.
-   - **Faturamento por cliente:** evidencia a contribuição de cada consumidor para a receita.
-   - **Concentração da receita:** avalia que parcela do faturamento é gerada por diferentes proporções da base de clientes.
+   - - **Ticket médio:** permite avaliar se os clientes passaram a gastar mais em cada compra, indicando um aumento no valor médio das vendas.
+   - **Quantidade de vendas:** permite verificar se houve um aumento no volume de transações, indicando maior atividade comercial. 
+   - **Quantidade de clientes:** permite avaliar a evolução da base de clientes, indicando se o crescimento do volume de vendas está associado à conquista de novos consumidores.
+   - **Frequência de compra dos clientes:** permite identificar quantas vezes, em média, cada cliente realizou compras em determinado período, indicando se os clientes existentes passaram a comprar com maior frequência.
+   - **Faturamento por cliente:** permite identificar quanto cada cliente contribui para a receita total, evidenciando diferenças na participação individual dos consumidores no faturamento.
+   - **Concentração da receita por número de clientes:** permite avaliar qual parcela do faturamento está concentrada em diferentes proporções da base de clientes, identificando o grau de dependência em relação aos maiores consumidores.
 
-   A leitura conjunta desses indicadores ajuda a identificar os fatores associados ao crescimento do faturamento e a avaliar como a receita se distribui entre os clientes. Os resultados também apoiam recomendações de campanhas direcionadas a diferentes grupos de consumidores.
+   Essas métricas foram selecionadas porque a análise conjunta desses indicadores permite identificar os fatores associados ao crescimento do faturamento e compreender como a receita está distribuída entre os clientes. Além disso, os resultados contribuem para identificar oportunidades de melhoria e orientar decisões estratégicas relacionadas ao comportamento dos consumidores.
 5. **Visualizações:** os notebooks apresentam gráficos temporais, gráficos de distribuição e indicadores resumidos para facilitar a interpretação dos resultados.
 
 ## Principais resultados
@@ -149,3 +152,6 @@ O maior faturamento individual por cliente foi de **R$ 13.664,08**. Cerca de **2
 **Conclusão:** De acordo com o critério adotado, o faturamento cresceu principalmente junto com a expansão da base de clientes, sem aumento relevante da frequência de compra. A receita não depende de um único consumidor, mas uma parcela expressiva do faturamento está concentrada em parte da base, o que torna importantes as ações de retenção e fidelização.
 
 **Limitações:** Para realizar uma análise mais completa da sustentabilidade do crescimento, seria necessário avaliar a retenção de clientes, a recorrência da receita, a evolução das margens e a concentração das vendas por vendedor ou região. Essas análises, no entanto, não foram contempladas neste trabalho, que se limita a apresentar um diagnóstico geral dos mecanismos de crescimento da receita. Além disso, os dados de 2018 estão incompletos devido ao truncamento da série histórica ao final do período. Portanto, as comparações devem considerar esse recorte, uma vez que os resultados não representam um ano completo.
+
+## Em desenvolvimento
+**Power BI:** em processo de aprendizado e desenvolvimento de habilidades em análise e visualização de dados.
