@@ -1,6 +1,6 @@
 # Portfólio de Ciência de Dados
 
-<img src="Imagens/Banner_Adilson.jpeg"">
+<img src="Imagens/Banner_Adilson.jpeg">
 Olá! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física pela Universidade Federal do Paraná. Tenho experiência em exploração de dados e aplico conhecimentos de matemática, estatística e programação para transformar dados em informações relevantes, identificar padrões e tendências e apoiar a tomada de decisões. Tenho interesse em atuar nas áreas de Análise de Dados e Ciência de Dados.
 
 # Projeto: Diagnóstico financeiro da Olist
