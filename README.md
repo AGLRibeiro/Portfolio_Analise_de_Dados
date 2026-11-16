@@ -1,4 +1,4 @@
-# Portfólio de Ciência de Dados
+# Portfólio de Análise de Dados
 
 <img src="Imagens/Banner_Adilson.jpeg">
 Olá! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física pela Universidade Federal do Paraná. Tenho experiência em exploração de dados e aplico conhecimentos de matemática, estatística e programação para transformar dados em informações relevantes, identificar padrões e tendências e apoiar a tomada de decisões. Tenho interesse em atuar nas áreas de Análise de Dados e Ciência de Dados.
@@ -18,7 +18,7 @@ Olá! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física p
 **Principais resultados:**
 - A receita aumentou devido ao crescimento do número de vendas. O ticket médio permaneceu praticamente estável (+1,53%), enquanto o volume de vendas cresceu 140,19% no mesmo período.
 - O número de vendas aumentou em decorrência do crescimento de 147,17% na base de clientes, e não do aumento da frequência de compra, que permaneceu praticamente estável, apresentando uma variação negativa de 0,45%.
-- A receita não depende de um único cliente; o maior faturamento individual é de R$ 13.664,08. Ainda assim, há concentração em uma parcela da base de consumidores: 29,28% dos clientes representam 63,9% da receita, equivalente a R$ 9.810.944,74.
+- A receita não depende de um único cliente; o maior faturamento individual é de R$ 13.664,08. Ainda assim, há concentração em uma parcela da base de consumidores: 29,28% dos clientes representam 63,9% da receita.
 
 **Recomendações:** 
 - Embora a receita não esteja concentrada em um único cliente, uma parcela de aproximadamente 29,28% da base é responsável por 63,9% do faturamento. Isso evidencia a importância desse grupo para os resultados da empresa. Recomenda-se desenvolver estratégias de retenção e fidelização, com programas de fidelidade, benefícios exclusivos e ações de relacionamento, para reduzir o risco de perda de receita. Também se recomenda implementar campanhas de upsell e cross-sell para aumentar o ticket médio dos demais clientes e estimular uma distribuição mais equilibrada do faturamento.
@@ -107,7 +107,7 @@ Esta tabela reúne os pedidos e suas principais datas, conectando cada compra ao
 2. **Exploração e preparação:** [`analytics/raw_exploratory_analysis.ipynb`](analytics/raw_exploratory_analysis.ipynb) examina as tabelas, os valores ausentes, os status dos pedidos e a estabilidade dos registros ao longo do tempo.
 3. **Seleção dos pedidos:** a função `create_view_cleaned_data()` cria a view `orders_cleaned`, considerando os pedidos entregues com data de compra a partir de 1º de dezembro de 2016 e anterior a 26 de agosto de 2018.
 4. **Análise financeira:** [`analytics/analysis.ipynb`](analytics/analysis.ipynb) compara os seguintes indicadores:
-   - - **Ticket médio:** permite avaliar se os clientes passaram a gastar mais em cada compra, indicando um aumento no valor médio das vendas.
+   - **Ticket médio:** permite avaliar se os clientes passaram a gastar mais em cada compra, indicando um aumento no valor médio das vendas.
    - **Quantidade de vendas:** permite verificar se houve um aumento no volume de transações, indicando maior atividade comercial. 
    - **Quantidade de clientes:** permite avaliar a evolução da base de clientes, indicando se o crescimento do volume de vendas está associado à conquista de novos consumidores.
    - **Frequência de compra dos clientes:** permite identificar quantas vezes, em média, cada cliente realizou compras em determinado período, indicando se os clientes existentes passaram a comprar com maior frequência.
@@ -120,20 +120,20 @@ Esta tabela reúne os pedidos e suas principais datas, conectando cada compra ao
 ## Principais resultados
 
 ### Evolução do faturamento
-
 ![Evolução do faturamento da Olist](Imagens/Evolução_do_faturamento_olist.png)
 
-O faturamento passou de R$ 3.461.379,87 em 2017 para R$ 8.441.169,30 no período comparável de 2018, um aumento de **143,87%**. No mesmo intervalo, o número de vendas subiu de 21.921 para 52.651 (**140,19%**), enquanto o ticket médio variou **1,53%**.
+O faturamento passou de **R$ 3,46 milhões em 2017 para R$ 8,44 milhões em 2018**, considerando o período comparável, representando um crescimento de **143,87%**. No mesmo intervalo, o número de vendas aumentou **140,19%**, enquanto o ticket médio apresentou uma variação de apenas **1,53%**.
 
 ![Evolução de clientes e faturamento da Olist](Imagens/Evolução_de_clientes_e_faturamento_Olist.png)
 
-A base de clientes aumentou de 20.564 para 50.828 (**147,17%**), enquanto a frequência média de compra variou **-0,45%**.
+A evolução do faturamento foi acompanhada pela expansão da base de clientes, que passou de aproximadamente **22,6 mil para 50,8 mil**, um crescimento de **147,17%**. Entretanto, a frequência média de compra apresentou uma leve retração de **0,45%**.
 
 ### Distribuição do faturamento por cliente
 
 ![Distribuição do faturamento por cliente](Imagens/Distribuição_do_faturamento_por_cliente.png)
 
-O maior faturamento individual por cliente foi de **R$ 13.664,08**. Cerca de **29,28% dos clientes** responderam por **63,9% da receita**, equivalente a **R$ 9.810.944,74**.
+O maior faturamento individual por cliente foi de **R$ 13.664,08**. A análise também revelou uma concentração de receita: aproximadamente **29,28% dos clientes** foram responsáveis por **63,9% do faturamento**, equivalente a **R$ 9,81 milhões**.
+
 
 ## Como executar
 
