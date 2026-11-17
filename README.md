@@ -1,7 +1,7 @@
 # Portfólio de Análise de Dados
 
 <img src="Imagens/Banner_Adilson.jpeg">
-Olá! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física pela Universidade Federal do Paraná (UFPR). Tenho conhecimentos em exploração e análise de dados e aplico conceitos de matemática, estatística e programação para transformar dados em informações relevantes, identificar padrões e tendências e contribuir para a tomada de decisões. Tenho interesse em desenvolver minha carreira nas áreas de Análise de Dados, Ciência de Dados e Engenharia de Dados, aplicando e aprimorando meus conhecimentos matemáticos, estatísticos e computacionais.
+Ola! Meu nome é Adilson Gabriel de Lacerda Ribeiro e sou bacharel em Física pela Universidade Federal do Paraná (UFPR). Tenho conhecimentos em exploração e análise de dados e aplico conceitos de matemática, estatística e programação para transformar dados em informações relevantes, identificar padrões e tendências e contribuir para a tomada de decisões. Busco desenvolver minha carreira nas áreas de Análise de Dados, Ciência de Dados e Engenharia de Dados, colocando em prática e aprimorando meus conhecimentos matemáticos, estatísticos e computacionais.
 
 # Projeto: Diagnóstico financeiro da Olist
 ## Resumo
